@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/apaBook">APA Book</router-link>
-      <router-link to="/apaWebsite">APA Website</router-link>
-      <router-link to="/chicagoBook">Chicago Book</router-link>
+      <router-link to="/" class="spaced">Home</router-link>
+      <span>APA</span>
+      <router-link to="/apaBook" class="indented">Book</router-link>
+      <router-link to="/apaWebsite" class="indented">Website</router-link>
+      <span>Chicago</span>
+      <router-link to="/chicagoBook" class="indented">Book</router-link>
+      <router-link to="/about" class="bottom">About</router-link>
     </div>
     <router-view/>
   </div>
@@ -47,5 +49,20 @@
 
 #showTemplate {
     cursor: pointer;
+}
+
+.indented {
+    margin-left: 30px;
+}
+
+.bottom {
+    bottom: 30px;
+    margin-top: 30px;
+    position: fixed;
+}
+
+.spaced {
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 </style>
