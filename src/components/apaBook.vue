@@ -1,8 +1,11 @@
 <template>
   <div class="book">
     <h1>APA Book Citation</h1>
-    <h3 v-on:click="showTemplate = !showTemplate" id="showTemplate"> Show Template</h3>
-    <p v-if="showTemplate">Last, F. M. (Year Published) <i>Book</i>. City, State: Publisher.</p>
+    <fieldset>
+        <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
+        <p v-if="showTemplate">Last, F. M. (Year Published) <i>Book</i>. City, State: Publisher.</p>
+    </fieldset>
+    
       <p>{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}) <i>{{Title}}</i>. {{City}}, {{State}}: {{Publisher}}.</p>
 
       <form class="pure-form pure-form-aligned">

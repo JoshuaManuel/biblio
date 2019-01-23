@@ -47,4 +47,8 @@
 #showTemplate {
     cursor: pointer;
 }
+
+fieldset {
+    margin-right: 30px;
+}
 </style>

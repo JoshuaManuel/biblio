@@ -1,8 +1,11 @@
 <template>
   <div class="web">
     <h1>APA Web Citation</h1>
-    <h3 v-on:click="showTemplate = !showTemplate" id="showTemplate">Show Template</h3>
-    <p v-if="showTemplate">Last, F. M. (Year, Month Date Published). Article title. Retrieved from URL</p>
+    <fieldset>
+        <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
+        <p v-if="showTemplate">Last, F. M. (Year, Month Date Published). Article title. Retrieved from URL</p>
+    </fieldset>
+
       <p>{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
 
       <form class="pure-form pure-form-aligned">

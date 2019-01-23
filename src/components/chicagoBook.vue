@@ -1,11 +1,13 @@
 <template>
   <div class="book">
     <h1>Chicago Book Citation</h1>
-    <h3 v-on:click="showTemplate = !showTemplate" id="showTemplate">Show Template</h3>
-    <p v-if="showTemplate">First Last, Book, (Place of Publication, Publisher, Year), Pages Referenced.</p>
-    <p v-if="showTemplate">Last, Book, Pages Referenced.</p>
-      <p>{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
-      <p>{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
+    <fieldset>
+        <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
+        <p v-if="showTemplate">First Last, Book, (Place of Publication, Publisher, Year), Pages Referenced.</p>
+        <p v-if="showTemplate">Last, Book, Pages Referenced.</p>
+        </fieldset>
+          <p>{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
+          <p>{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -44,8 +46,6 @@
                   <label for="Pages">Pages Referenced</label>
                   <input v-model="Pages" placeholder="Pages Referenced">
               </div>
-
-
 
           </fieldset>
         <button v-on:click="resetForm" class="pure-button">Clear Form</button>
