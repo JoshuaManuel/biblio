@@ -2,6 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
+import apaBook from "./components/apaBook.vue"
+import apaWebsite from "./components/apaWebsite.vue"
+import chicagoBook from "./components/chicagoBook.vue"
+
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -10,6 +16,21 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/apaBook',
+      name: 'APA Book',
+      component: apaBook
+    },
+    {
+      path: '/apaWebsite',
+      name: 'APA Website',
+      component: apaWebsite
+    },
+    {
+      path: '/chicagoBook',
+      name: 'Chicago Book',
+      component: chicagoBook
     },
     {
       path: '/about',
