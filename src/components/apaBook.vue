@@ -3,10 +3,15 @@
     <h1>APA Book Citation</h1>
     <fieldset>
         <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
-        <p v-if="showTemplate">Last, F. M. (Year Published) <i>Book</i>. City, State: Publisher.</p>
+        <span v-if="showTemplate">
+            <p>Last, F. M. (Year Published) <i>Book</i>. City, State: Publisher.</p>
+            <p><b>In text:</b> (Last, Year Published, Page(s) Referenced</p>
+        </span>
     </fieldset>
-    
+
       <p>{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}) <i>{{Title}}</i>. {{City}}, {{State}}: {{Publisher}}.</p>
+
+      <p><b>In text:</b> ({{lName}}, {{Year}})</p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -49,9 +54,12 @@
                   <label for="Publisher">Publisher</label>
                   <input v-model="Publisher" placeholder="Publisher">
               </div>
-
           </fieldset>
-        <button v-on:click="resetForm" class="pure-button">Clear Form</button>
+          <div class="footer">
+              <button v-on:click="resetForm" class="pure-button button-success">Save Biblio!</button>
+              <button v-on:click="resetForm" class="pure-button button-secondary">Copy Biblio!</button>
+              <button v-on:click="resetForm" class="pure-button button-warning">Clear Form</button>
+          </div>
       </form>
 
   </div>
@@ -82,6 +90,6 @@ export default {
           this.Publisher = '';
           this.Pages = '';
       }
-  }
+    }
   }
 </script>

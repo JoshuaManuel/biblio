@@ -14,7 +14,8 @@ export function initialState() {
         City: '',
         State: '',
         Publisher: '',
-        Pages: ''
+        Pages: '',
+        Website: '',
     }
 }
 //not needed. Make sure to delete once all the pages are in!
@@ -32,4 +33,5 @@ export function resetForm() {
     this.State = '';
     this.Publisher = '';
     this.Pages = '';
+    this.Website = '';
 }

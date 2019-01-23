@@ -9,7 +9,7 @@ Planned support for: APA, Chicago, and MLA citation styles.
 * [Vue CLI 3](https://cli.vuejs.org/)- Command line tool for scaffolding the initial Vue project
 * [Electron](https://electronjs.org/) - Dependency Management
 * [vue-cli-plugin-electron-builder](https://github.com/nklayman/vue-cli-plugin-electron-builder) - Scaffolding Electron in Biblio
-* [PureCSS](https://purecss.io/) - the .pure-form-stacked class to create vertical the vertical
+* [PureCSS](https://purecss.io/) - some CSS formatting
 
 ## Authors
 

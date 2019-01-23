@@ -6,12 +6,16 @@
         <span v-if="showTemplate">
             <p><b>Long:</b></p>
             <p>First Last, Book, (Place of Publication, Publisher, Year), Pages Referenced.</p>
+
             <p><b>Short:</b></p>
             <p>Last, Book, Pages Referenced.</p>
+
+            <p><b>In text:</b> (Last, Year Published, Pages Referenced)</p>
         </span>
         </fieldset>
           <p>{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
           <p>{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
+          <p><b>In text:</b> ({{lName}}, {{Year}}, {{Pages}})</p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -48,11 +52,16 @@
 
               <div class="pure-control-group">
                   <label for="Pages">Pages Referenced</label>
-                  <input v-model="Pages" placeholder="Pages Referenced">
+                  <input v-model="Pages" placeholder="ex. 1-2, 4">
               </div>
 
           </fieldset>
-        <button v-on:click="resetForm" class="pure-button">Clear Form</button>
+          <div class="footer">
+              <button v-on:click="resetForm" class="pure-button button-success">Save Biblio!</button>
+              <button v-on:click="resetForm" class="pure-button button-secondary">Copy Biblio!</button>
+              <button v-on:click="resetForm" class="pure-button button-warning">Clear Form</button>
+          </div>
+
       </form>
 
   </div>

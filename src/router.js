@@ -5,8 +5,7 @@ import Home from './views/Home.vue'
 import apaBook from "./components/apaBook.vue"
 import apaWebsite from "./components/apaWebsite.vue"
 import chicagoBook from "./components/chicagoBook.vue"
-
-
+import chicagoWebsite from "./components/chicagoWebsite.vue"
 
 Vue.use(Router)
 
@@ -31,6 +30,11 @@ export default new Router({
       path: '/chicagoBook',
       name: 'Chicago Book',
       component: chicagoBook
+    },
+    {
+      path: '/chicagoWebsite',
+      name: 'Chicago Website',
+      component: chicagoWebsite
     },
     {
       path: '/about',

@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <HelloWorld msg="Welcome to Biblio!"/>
+    <p>Biblio is an app to help you make bibliography citations. As you fill in the fields, you'll see the citation fill out in real-time!</p>
   </div>
 </template>
 

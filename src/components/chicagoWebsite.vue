@@ -1,38 +1,41 @@
 <template>
-  <div class="web">
-    <h1>APA Web Citation</h1>
+  <div class="book">
+    <h1>Chicago Website Citation</h1>
     <fieldset>
         <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
         <span v-if="showTemplate">
-            <p>Last, F. M. (Year, Month Date Published). Article title. Retrieved from URL</p>
-            <p><b>In text:</b> (Last, Year Published)</p>
+            <p>Last Name, First Name. “Page Title.” Website Name. Web Address (retrieved Date Accessed).</p>
         </span>
-    </fieldset>
+        </fieldset>
 
-      <p>{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
-
-      <p><b>In text:</b> ({{lName}}, {{Year}})</p>
+          <p>{{lName}}, {{fName}}. "{{Title}}." {{Website}}. {{url}} (accessed {{Month}} {{Day}}, {{Year}})</p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
+
               <div class="pure-control-group">
                   <label for="lName">Last Name</label>
                   <input v-model="lName" placeholder="Last Name">
               </div>
 
               <div class="pure-control-group">
-                  <label for="fInitial">First Initial</label>
-                  <input v-model="fInitial" placeholder="First Initial">
+                  <label for="fName">First Name</label>
+                  <input v-model="fName" placeholder="First Name">
               </div>
 
               <div class="pure-control-group">
-                  <label for="mInitial">Middle Initial</label>
-                  <input v-model="mInitial" placeholder="Middle Initial">
+                  <label for="Title">Page Title</label>
+                  <input v-model="Title" placeholder="Page Title">
               </div>
 
               <div class="pure-control-group">
-                  <label for="Year">Year Published</label>
-                  <input v-model="Year" placeholder="Year Published">
+                  <label for="Website">Website Name</label>
+                  <input v-model="Website" placeholder="Owner, if unknown">
+              </div>
+
+              <div class="pure-control-group">
+                  <label for="url">URL of article</label>
+                  <input v-model="url" placeholder="URL of article">
               </div>
 
               <div class="pure-control-group">
@@ -46,14 +49,10 @@
               </div>
 
               <div class="pure-control-group">
-                  <label for="Title">Title</label>
-                  <input v-model="Title" placeholder="Title of Work">
+                  <label for="Year">Year Published</label>
+                  <input v-model="Year" placeholder="Year Published">
               </div>
 
-              <div class="pure-control-group">
-                  <label for="url">URL of article</label>
-                  <input v-model="url" placeholder="URL of article">
-              </div>
           </fieldset>
           <div class="footer">
               <button v-on:click="resetForm" class="pure-button button-success">Save Biblio!</button>
@@ -68,11 +67,10 @@
 
 <script>
 
-
 import * as utils from '../assets/utils.js'
 
 export default {
-  name: 'website',
+  name: 'book',
   data: function () {
       return utils.initialState();
   },
@@ -91,7 +89,8 @@ export default {
           this.State = '';
           this.Publisher = '';
           this.Pages = '';
+          this.Website = '';
       }
   }
-  }
+}
 </script>
