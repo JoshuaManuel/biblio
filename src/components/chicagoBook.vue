@@ -3,8 +3,12 @@
     <h1>Chicago Book Citation</h1>
     <fieldset>
         <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
-        <p v-if="showTemplate">First Last, Book, (Place of Publication, Publisher, Year), Pages Referenced.</p>
-        <p v-if="showTemplate">Last, Book, Pages Referenced.</p>
+        <span v-if="showTemplate">
+            <p><b>Long:</b></p>
+            <p>First Last, Book, (Place of Publication, Publisher, Year), Pages Referenced.</p>
+            <p><b>Short:</b></p>
+            <p>Last, Book, Pages Referenced.</p>
+        </span>
         </fieldset>
           <p>{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
           <p>{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>

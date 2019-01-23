@@ -19,6 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   padding-left: 190px;
+  padding-right: 30px;
 
 }
 
@@ -46,9 +47,5 @@
 
 #showTemplate {
     cursor: pointer;
-}
-
-fieldset {
-    margin-right: 30px;
 }
 </style>
