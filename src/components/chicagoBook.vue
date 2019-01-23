@@ -56,20 +56,15 @@
               </div>
 
           </fieldset>
-          <div class="footer">
-              <button v-on:click="resetForm" class="pure-button button-success">Save Biblio!</button>
-              <button v-on:click="resetForm" class="pure-button button-secondary">Copy Biblio!</button>
-              <button v-on:click="resetForm" class="pure-button button-warning">Clear Form</button>
-          </div>
-
+          <custom-footer v-on:save="test" v-on:copy="test" v-on:clear="clearForm"></custom-footer>
       </form>
-
   </div>
 </template>
 
 <script>
 
 import * as utils from '../assets/utils.js'
+import Footer from './footer.vue'
 
 export default {
   name: 'book',
@@ -77,7 +72,7 @@ export default {
       return utils.initialState();
   },
   methods: {
-      resetForm: function () {
+      clearForm: function () {
           this.lName = '';
           this.fName = '';
           this.fInitial = '';
@@ -91,7 +86,13 @@ export default {
           this.State = '';
           this.Publisher = '';
           this.Pages = '';
+      },
+      test: function () {
+          alert("hello");
       }
+  },
+  components: {
+      'custom-footer': Footer
   }
 }
 </script>
