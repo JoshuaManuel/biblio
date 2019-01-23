@@ -13,7 +13,7 @@ Planned support for: APA, Chicago, and MLA citation styles.
 
 ## Authors
 
-* **Joshua Manuel** - *Initial work* - [JoshuaManuel](github.com/JoshuaManuel)
+* **Joshua Manuel** - *Initial work* - [JoshuaManuel](https://github.com/JoshuaManuel)
 
 ## License
 
