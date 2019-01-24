@@ -8,7 +8,7 @@
         </span>
         </fieldset>
 
-          <p>{{lName}}, {{fName}}. "{{Title}}." {{Website}}. {{url}} (accessed {{Month}} {{Day}}, {{Year}})</p>
+          <p ref="bib">{{lName}}, {{fName}}. "{{Title}}." {{Website}}. {{url}} (accessed {{Month}} {{Day}}, {{Year}})</p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -55,7 +55,7 @@
 
           </fieldset>
 
-          <custom-footer v-on:save="test" v-on:copy="test" v-on:clear="clearForm"></custom-footer>
+          <custom-footer v-on:save="test" v-on:copy="copy" v-on:clear="clearForm"></custom-footer>
 
       </form>
   </div>
@@ -66,6 +66,7 @@
 import * as utils from '../assets/utils.js'
 import Footer from './footer.vue'
 
+const { clipboard } = require('electron')
 
 export default {
   name: 'book',
@@ -90,7 +91,11 @@ export default {
           this.Website = '';
       },
       test: function () {
-          alert("hello");
+          alert("test")
+      },
+      copy: function() {
+          clipboard.writeText(this.$refs.bib.innerHTML);
+          alert("copied")
       }
   },
   components: {

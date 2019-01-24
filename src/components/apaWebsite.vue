@@ -9,7 +9,7 @@
         </span>
     </fieldset>
 
-      <p>{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
+      <p ref="bib">{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
 
       <p><b>In text:</b> ({{lName}}, {{Year}})</p>
 
@@ -55,7 +55,7 @@
                   <input v-model="url" placeholder="URL of article">
               </div>
           </fieldset>
-          <custom-footer v-on:save="test" v-on:copy="test" v-on:clear="clearForm"></custom-footer>
+          <custom-footer v-on:save="test" v-on:copy="copy" v-on:clear="clearForm"></custom-footer>
       </form>
 
   </div>
@@ -63,9 +63,10 @@
 
 <script>
 
-
 import * as utils from '../assets/utils.js'
 import Footer from './footer.vue'
+
+const { clipboard } = require('electron')
 
 export default {
   name: 'website',
@@ -90,6 +91,10 @@ export default {
       },
       test: function () {
           alert("hello");
+      },
+      copy: function() {
+          clipboard.writeText(this.$refs.bib.innerHTML);
+          alert("copied");
       }
   },
   components: {

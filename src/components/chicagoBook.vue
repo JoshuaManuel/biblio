@@ -13,7 +13,7 @@
             <p><b>In text:</b> (Last, Year Published, Pages Referenced)</p>
         </span>
         </fieldset>
-          <p>{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
+          <p ref="bib">{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
           <p>{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
           <p><b>In text:</b> ({{lName}}, {{Year}}, {{Pages}})</p>
 
@@ -56,7 +56,7 @@
               </div>
 
           </fieldset>
-          <custom-footer v-on:save="test" v-on:copy="test" v-on:clear="clearForm"></custom-footer>
+          <custom-footer v-on:save="test" v-on:copy="copy" v-on:clear="clearForm"></custom-footer>
       </form>
   </div>
 </template>
@@ -65,6 +65,8 @@
 
 import * as utils from '../assets/utils.js'
 import Footer from './footer.vue'
+
+const { clipboard } = require('electron')
 
 export default {
   name: 'book',
@@ -89,6 +91,10 @@ export default {
       },
       test: function () {
           alert("hello");
+      },
+      copy: function() {
+          clipboard.writeText(this.$refs.bib.innerHTML);
+          alert("copied");
       }
   },
   components: {
