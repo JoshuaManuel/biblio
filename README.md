@@ -18,3 +18,6 @@ Planned support for: APA, Chicago, and MLA citation styles.
 ## License
 
 I haven't decided on which license to release this code under yet, but I'll update the project with it later.
+
+## Bugs
++ When copying through the button, italics are interpreted literally as <i></i> tags
