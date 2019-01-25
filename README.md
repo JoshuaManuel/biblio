@@ -6,7 +6,7 @@ Planned support for: APA, Chicago, and MLA citation styles.
 
 ## Installation
 
-Download or clone the repo, then run "npm run electron:serve" in the directory, which will build and launch the program in developer mode.
+Download or clone the repo, then run "npm run electron:serve" in the directory to build and launch the program in developer mode.
 
 I'll provide prebuilt binaries and make the Github Page later on in development as Biblio nears feature-completeness.
 
