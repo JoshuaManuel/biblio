@@ -4,6 +4,12 @@ A desktop app to create bibliography citations.
 
 Planned support for: APA, Chicago, and MLA citation styles.
 
+## Installation
+
+Download or clone the repo, then run "npm run electron:serve" in the directory, which will build and launch the program in developer mode.
+
+I'll provide prebuilt binaries and make the Github Page later on in development as Biblio nears feature-completeness.
+
 ## Built With
 
 * [Vue CLI 3](https://cli.vuejs.org/)- Command line tool for scaffolding the initial Vue project
@@ -21,3 +27,5 @@ I haven't decided on which license to release this code under yet, but I'll upda
 
 ## Bugs
 + When copying through the button, italics are interpreted literally as <i></i> tags
+
+  
