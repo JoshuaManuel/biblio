@@ -9,9 +9,9 @@
         </span>
     </fieldset>
 
-      <p ref="bib">{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}) <i>{{Title}}</i>. {{City}}, {{State}}: {{Publisher}}.</p>
+      <p ref="ref1" class="clickable" v-on:click="copyRef1">{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}) <i>{{Title}}</i>. {{City}}, {{State}}: {{Publisher}}.</p>
 
-      <p><b>In text:</b> ({{lName}}, {{Year}})</p>
+      <p v-on:click="copyRef1_text" class="clickable"><b>In text:</b> <span ref="ref1_text">({{lName}}, {{Year}})</span></p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -55,7 +55,7 @@
                   <input v-model="Publisher" placeholder="Publisher">
               </div>
           </fieldset>
-          <custom-footer v-on:save="test" v-on:copy="copy" v-on:clear="clearForm"></custom-footer>
+          <custom-footer v-on:save="test" v-on:clear="clearForm"></custom-footer>
       </form>
 
   </div>
@@ -92,9 +92,13 @@ export default {
       test: function () {
           alert("hello");
       },
-      copy: function() {
-          clipboard.writeText(this.$refs.bib.innerHTML);
-          alert("copied");
+      copyRef1: function(ref) {
+          //clipboard.writeText(this.$refs.bib.innerHTML);
+          clipboard.writeRTF(utils.convertHtmlToRtf(this.$refs.ref1.innerHTML))
+      },
+      copyRef1_text: function(ref) {
+          //clipboard.writeText(this.$refs.bib.innerHTML);
+          clipboard.writeRTF(utils.convertHtmlToRtf(this.$refs.ref1_text.innerHTML))
       }
   },
   components: {

@@ -35,3 +35,15 @@ export function resetForm() {
     this.Pages = '';
     this.Website = '';
 }
+
+export function convertHtmlToRtf(html) {
+    var header = "{\\rtf1\\ansi\\deff0\n"
+    var footer = "}"
+
+    html = html.replace("<i>", "{\\i ")
+    html = html.replace("</i>", "}")
+
+    console.log(header + html+ footer);
+    //console.log(html)
+    return header + html + footer;
+}

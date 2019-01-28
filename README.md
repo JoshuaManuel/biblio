@@ -26,6 +26,6 @@ I'll provide prebuilt binaries and make the Github Page later on in development 
 I haven't decided on which license to release this code under yet, but I'll update the project with it later.
 
 ## Bugs
-+ When copying through the button, italics are interpreted literally as <i></i> tags
++ [x] When copying through the button, italics are interpreted literally as <i></i> tags
 
   

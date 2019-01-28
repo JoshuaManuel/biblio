@@ -106,4 +106,8 @@
     background-color: white;
 }
 
+.clickable:hover {
+    cursor: copy;
+}
+
 </style>
