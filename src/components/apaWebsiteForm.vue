@@ -1,17 +1,8 @@
-<template>
-  <div class="web">
-    <h1>APA Web Citation</h1>
-    <fieldset>
-        <legend v-on:click="showTemplate = !showTemplate" id="showTemplate">Template</legend>
-        <span v-if="showTemplate">
-            <p>Last, F. M. (Year, Month Date Published). Article title. Retrieved from URL</p>
-            <p><b>In text:</b> (Last, Year Published)</p>
-        </span>
-    </fieldset>
+<template lang="html">
+  <div class="apaWebsiteForm">
+      <p ref="ref1" class="clickable" v-on:click="copy('ref1')">{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
 
-      <p ref="bib">{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
-
-      <p><b>In text:</b> ({{lName}}, {{Year}})</p>
+      <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text">({{lName}}, {{Year}})</span></p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -57,48 +48,35 @@
           </fieldset>
           <custom-footer v-on:save="test" v-on:copy="copy" v-on:clear="clearForm"></custom-footer>
       </form>
-
   </div>
 </template>
 
 <script>
-
 import * as utils from '../assets/utils.js'
 import Footer from './footer.vue'
 
 const { clipboard } = require('electron')
 
 export default {
-  name: 'website',
+  name: 'book',
   data: function () {
       return utils.initialState();
   },
   methods: {
       clearForm: function () {
-          this.lName = '';
-          this.fName = '';
-          this.fInitial = '';
-          this.mInitial = '';
-          this.Year = '';
-          this.Month = '';
-          this.Day = '';
-          this.Title = '';
-          this.url = '';
-          this.City = '';
-          this.State = '';
-          this.Publisher = '';
-          this.Pages = '';
+          for (let prop in utils.initialState()) {
+              this[prop] = '';
+          }
       },
       test: function () {
           alert("hello");
       },
-      copy: function() {
-          clipboard.writeText(this.$refs.bib.innerHTML);
-          alert("copied");
-      }
+      copy: function(ref) {
+          clipboard.writeRTF(utils.convertHtmlToRtf(this.$refs[ref].innerHTML))
+      },
   },
   components: {
-      'custom-footer': Footer
+      'custom-footer': Footer,
   }
 }
 </script>

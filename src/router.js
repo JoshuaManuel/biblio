@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
-import apaBook from "./components/apaBook.vue"
-import apaWebsite from "./components/apaWebsite.vue"
-import chicagoBook from "./components/chicagoBook.vue"
-import chicagoWebsite from "./components/chicagoWebsite.vue"
+import apaBook from "./views/apaBook.vue"
+import apaWebsite from "./views/apaWebsite.vue"
+import chicagoBook from "./views/chicagoBook.vue"
+import chicagoWebsite from "./views/chicagoWebsite.vue"
 
 Vue.use(Router)
 

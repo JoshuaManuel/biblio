@@ -1,7 +1,6 @@
 
 export function initialState() {
     return {
-        showTemplate: false,
         lName: '',
         fName:'',
         fInitial: '',
