@@ -1,7 +1,9 @@
 <template lang="html">
   <div class="chicagoWebsiteForm">
-      
-        <p ref="bib">{{lName}}, {{fName}}. "{{Title}}." {{Website}}. {{url}} (accessed {{Month}} {{Day}}, {{Year}})</p>
+
+        <p ref="ref1" class="clickable" v-on:click="copy('ref1')">{{lName}}, {{fName}}. "{{Title}}." {{Website}}. {{url}} (accessed {{Month}} {{Day}}, {{Year}})</p>
+
+        <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text">({{lName}}, {{Year}})</span></p>
 
     <form class="pure-form pure-form-aligned">
         <fieldset>

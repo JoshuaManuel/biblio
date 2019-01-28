@@ -1,8 +1,10 @@
 <template lang="html">
   <div class="chicagoBookForm">
-      <p ref="bib">{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
-      <p>{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
-      <p><b>In text:</b> ({{lName}}, {{Year}}, {{Pages}})</p>
+      <p ref="ref1" class="clickable" v-on:click="copy('ref1')">{{fName}} {{lName}}, <i>{{Title}}</i>, ({{City}}, {{Publisher}}, {{Year}}), {{Pages}}.</p>
+
+      <p  ref="ref2" class="clickable" v-on:click="copy('ref2')">{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
+
+      <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text">({{lName}}, {{Year}}, {{Pages}})</span></p>
 
   <form class="pure-form pure-form-aligned">
       <fieldset>

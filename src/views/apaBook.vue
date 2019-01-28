@@ -17,9 +17,10 @@
 
 <script>
 import Form from '../components/apaBookForm.vue'
+
 export default {
     components: {
-        'custom-form': Form
+        'custom-form': Form,
     },
     data: function() {
         return {

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Form from '../components/apaBookForm.vue'
+import Form from '../components/apaWebsiteForm.vue'
 export default {
     components: {
         'custom-form': Form
