@@ -4,7 +4,7 @@
 
       <p  ref="ref2" class="clickable" v-on:click="copy('ref2')">{{lName}}, <i>{{Title}}</i>, {{Pages}}.</p>
 
-      <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text">({{lName}}, {{Year}}, {{Pages}})</span></p>
+      <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text"> ({{lName}}, {{Year}}, {{Pages}})</span></p>
 
   <form class="pure-form pure-form-aligned">
       <fieldset>

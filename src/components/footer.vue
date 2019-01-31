@@ -1,6 +1,8 @@
 <template lang="html">
     <div class="footer">
+        <!--
         <button v-on:click="$emit('save')" class="pure-button button-success">Save Biblio!</button>
+        -->
         <button v-on:click="$emit('clear')" class="pure-button button-warning">Clear Form</button>
     </div>
 </template>
