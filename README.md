@@ -2,13 +2,15 @@
 
 A desktop app to create bibliography citations.
 
-Planned support for: APA, Chicago, and MLA citation styles.
+Just fill in the fields and then click on the completed citations!
+
+![](readme/Biblio-Feb-03-2019.gif)
 
 ## Installation
 
-Download or clone the repo, then run "npm run electron:serve" in the directory to build and launch the program in developer mode.
+Download the .dmg file
 
-I'll provide prebuilt binaries and make the Github Page later on in development as Biblio nears feature-completeness.
+Download or clone the repo, then run "npm run electron:serve" in the directory to build and launch the program in developer mode.
 
 ## Built With
 
@@ -24,8 +26,3 @@ I'll provide prebuilt binaries and make the Github Page later on in development 
 ## License
 
 I haven't decided on which license to release this code under yet, but I'll update the project with it later.
-
-## Bugs
-+ [x] When copying through the button, italics are interpreted literally as <i></i> tags
-
-  
