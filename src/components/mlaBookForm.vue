@@ -2,7 +2,7 @@
     <div class="mlaBookForm">
         <p ref="ref1" class="clickable" v-on:click="copy('ref1')">{{lName}}, {{fName}}. <i>{{Title}}</i>. {{Publisher}}, {{Year}}</p>
 
-        <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text"> ({{lName}}, {{Pages}})</span></p>
+        <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text"> ({{lName}} {{Pages}})</span></p>
 
         <form class="pure-form pure-form-aligned">
             <fieldset>
