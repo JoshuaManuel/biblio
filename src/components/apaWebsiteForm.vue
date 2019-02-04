@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="apaWebsiteForm">
-      <p ref="ref1" class="clickable" v-on:click="copy('ref1')">{{lName}}, {{fInitial}}. {{mInitial}}. ({{Year}}, {{Month}} {{Day}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
+      <p ref="ref1" class="clickable" v-on:click="copy('ref1')">{{lName}}, {{fInitial}}. {{mInitial}}. ({{YearPub}}, {{MonthPub}} {{DayPub}}). <i>{{Title}}</i>. Retrieved from {{url}}</p>
 
-      <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text"> ({{lName}}, {{Year}})</span></p>
+      <p v-on:click="copy('ref1_text')" class="clickable"><b>In text:</b> <span ref="ref1_text"> ({{lName}}, {{YearPub}})</span></p>
 
       <form class="pure-form pure-form-aligned">
           <fieldset>
@@ -22,18 +22,18 @@
               </div>
 
               <div class="pure-control-group">
-                  <label for="Year">Year Published</label>
-                  <input v-model="Year" placeholder="Year Published">
+                  <label for="YearPub">Year Published</label>
+                  <input v-model="YearPub" placeholder="Year Published">
               </div>
 
               <div class="pure-control-group">
-                  <label for="Month">Month Published</label>
-                  <input v-model="Month" placeholder="Month published">
+                  <label for="MonthPub">Month Published</label>
+                  <input v-model="MonthPub" placeholder="Month published">
               </div>
 
               <div class="pure-control-group">
-                  <label for="Day">Date Published</label>
-                  <input v-model="Day" placeholder="Date published">
+                  <label for="DayPub">Date Published</label>
+                  <input v-model="DayPub" placeholder="Date published">
               </div>
 
               <div class="pure-control-group">
@@ -58,7 +58,7 @@ import Footer from './footer.vue'
 const { clipboard } = require('electron')
 
 export default {
-  name: 'book',
+  name: 'website',
   data: function () {
       return utils.initialState();
   },

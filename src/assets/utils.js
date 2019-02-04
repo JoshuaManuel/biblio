@@ -8,13 +8,16 @@ export function initialState() {
         Year: '',
         Month:'',
         Day: '',
+        YearPub: '',
+        MonthPub: '',
+        DayPub: '',
         Title: '',
         url: '',
         City: '',
         State: '',
         Publisher: '',
         Pages: '',
-        Website: '',
+        Website: ''
     }
 }
 //not needed. Make sure to delete once all the pages are in!

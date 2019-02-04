@@ -6,6 +6,8 @@ import apaBook from "./views/apaBook.vue"
 import apaWebsite from "./views/apaWebsite.vue"
 import chicagoBook from "./views/chicagoBook.vue"
 import chicagoWebsite from "./views/chicagoWebsite.vue"
+import mlaBook from "./views/mlaBook.vue"
+import mlaWebsite from "./views/mlaWebsite.vue"
 
 Vue.use(Router)
 
@@ -35,6 +37,16 @@ export default new Router({
       path: '/chicagoWebsite',
       name: 'Chicago Website',
       component: chicagoWebsite
+    },
+    {
+      path: '/mlaBook',
+      name: 'MLA Book',
+      component: mlaBook
+    },
+    {
+      path: '/mlaWebsite',
+      name: 'MLA Website',
+      component: mlaWebsite
     },
     {
       path: '/about',

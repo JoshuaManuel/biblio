@@ -8,6 +8,10 @@
       <span>Chicago</span>
       <router-link to="/chicagoBook" class="indented">Book</router-link>
       <router-link to="/chicagoWebsite" class="indented">Website</router-link>
+      <span>MLA</span>
+      <router-link to="/mlaBook" class="indented">Book</router-link>
+      <router-link to="/mlaWebsite" class="indented">Website</router-link>
+
 
       <router-link to="/about" class="bottom">About</router-link>
     </div>
