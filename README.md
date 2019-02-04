@@ -8,7 +8,11 @@ Just fill in the fields and then click on the completed citations!
 
 ## Installation
 
-Download the .dmg file
+1) Download the .dmg file from the releases folder
+2) Open it up and drag it to your Applications folder
+
+If you get an error about the program being unsigned, allow the app from:
++ System Preferences > Security & Privacy > General
 
 Download or clone the repo, then run "npm run electron:serve" in the directory to build and launch the program in developer mode.
 
