@@ -64,8 +64,13 @@ export default {
           alert("hello");
       },
       copy: function(ref) {
-
-          clipboard.writeRTF(utils.convertHtmlToRtf(this.$refs[ref].innerHTML))
+          var text = this.$refs[ref].innerHTML
+          var richText = utils.convertHtmlToRtf(this.$refs[ref].innerHTML)
+          var plainText = text.replace(/<(?:.|\n)*?>/gm, '');
+          clipboard.writeRTF(richText)
+          let myNotification = new Notification('Bibliography copied!', {
+            body: plainText
+          })
       },
   },
   components: {
