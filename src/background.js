@@ -69,6 +69,10 @@ function createWindow () {
         {
           label: 'Learn More',
           click () { require('electron').shell.openExternal('https://github.com/JoshuaManuel/biblio') }
+        },
+        {
+          label: 'Check for updates',
+          click () { require('electron').shell.openExternal('https://github.com/JoshuaManuel/biblio/releases') }
         }
       ]
     }
