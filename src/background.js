@@ -36,6 +36,8 @@ function createWindow () {
         { type: 'separator' },
         { role: 'cut' },
         { role: 'copy' },
+
+
         { role: 'paste' },
         { role: 'pasteandmatchstyle' },
         { role: 'delete' },
@@ -71,7 +73,7 @@ function createWindow () {
           click () { require('electron').shell.openExternal('https://github.com/JoshuaManuel/biblio') }
         },
         {
-          label: 'Check for updates',
+          label: 'Check for Updates',
           click () { require('electron').shell.openExternal('https://github.com/JoshuaManuel/biblio/releases') }
         }
       ]
