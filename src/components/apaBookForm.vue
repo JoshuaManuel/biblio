@@ -73,7 +73,6 @@ export default {
           alert("hello");
       },
       copy: function(ref) {
-
           clipboard.writeRTF(utils.convertHtmlToRtf(this.$refs[ref].innerHTML))
       },
   },
