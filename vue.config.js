@@ -6,7 +6,7 @@ module.exports = {
       builderOptions: {
         // options placed here will be merged with default configuration and passed to electron-builder
         "appId": "com.JoshuaManuel.biblio",
-        "icon": "./verified.icns",
+        "icon": "./Biblio_Logo.icns",
         "directories": {
             "buildResources": "./build"
         },
