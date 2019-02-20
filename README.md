@@ -34,4 +34,4 @@ Download or clone the repo, then run "npm run electron:serve" in the directory t
 
 ## License
 
-I haven't decided on which license to release this code under yet, but I'll update the project with it later.
+MIT
