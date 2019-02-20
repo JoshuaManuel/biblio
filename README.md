@@ -8,20 +8,25 @@ Just fill in the fields and then click on the completed citations!
 
 ## Installation
 
-1) Download the .dmg file from the releases folder
+1) Go to the **Releases** tab right above the green "clone/download" button
+2) Download the most recent "biblio-X.X.X-mac.zip" file
 2) Open it up and drag it to your Applications folder
 
-If you get an error about the program being unsigned, allow the app from:
-+ System Preferences > Security & Privacy > General
+If you get an **error about an unidentified developer**, control-click the app and hit open
 
 Download or clone the repo, then run "npm run electron:serve" in the directory to build and launch the program in developer mode.
 
 ## Built With
 
 * [Vue CLI 3](https://cli.vuejs.org/)- Command line tool for scaffolding the initial Vue project
+
 * [Electron](https://electronjs.org/) - Dependency Management
+
 * [vue-cli-plugin-electron-builder](https://github.com/nklayman/vue-cli-plugin-electron-builder) - Scaffolding Electron in Biblio
+
 * [PureCSS](https://purecss.io/) - some CSS formatting
+
+  
 
 ## Authors
 
