@@ -12,9 +12,11 @@ Just fill in the fields and then click on the completed citations!
 2) Download the most recent "biblio-X.X.X-mac.zip" file
 2) Open it up and drag it to your Applications folder
 
-If you get an **error about an unidentified developer**, control-click the app and hit open
+If you get an **error about an unidentified developer**, control-click the app and hit open.
 
 Download or clone the repo, then run "npm run electron:serve" in the directory to build and launch the program in developer mode.
+
+To build the app for your system, run "npm run electron:build"
 
 ## Built With
 
