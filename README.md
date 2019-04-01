@@ -1,8 +1,6 @@
-# Biblio
+## How it works:
 
-A desktop app to create bibliography citations.
-
-Just fill in the fields and then click on the completed citations!
+Just fill in the fields and then click on the completed citations to copy them to your clipboard!
 
 ![](readme/Biblio-Feb-03-2019.gif)
 
