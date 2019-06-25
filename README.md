@@ -1,3 +1,5 @@
+<img src="https://electronjs.org/app-img/biblio/biblio-icon-128.png">
+
 ## How it works:
 
 Just fill in the fields and then click on the completed citations to copy them to your clipboard!
