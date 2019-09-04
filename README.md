@@ -2,6 +2,8 @@
 
 # Biblio
 
+An app to help you create APA, MLA, and Chicago-style citations quickly and easily!
+
 ## How it works:
 
 Just fill in the fields and then click on the completed citations to copy them to your clipboard!
