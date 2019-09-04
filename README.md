@@ -1,4 +1,6 @@
-<img src="https://electronjs.org/app-img/biblio/biblio-icon-128.png">
+<a href="https://electronjs.org/apps/biblio"> <img src="https://electronjs.org/app-img/biblio/biblio-icon-128.png"></a>
+
+# Biblio
 
 ## How it works:
 
@@ -10,7 +12,7 @@ Just fill in the fields and then click on the completed citations to copy them t
 
 1) Go to the **Releases** tab right above the green "clone/download" button
 2) Download the most recent "biblio-X.X.X-mac.zip" file
-2) Open it up and drag it to your Applications folder
+3) Open it up and drag it to your Applications folder
 
 If you get an **error about an unidentified developer**, control-click the app and hit open.
 
